@@ -1,7 +1,1 @@
-Background
-Install
-Usage
-Badge
-Maintainers
-Contributing
-License
+This is a e commerce site created by Hussain and Kun
