@@ -1,0 +1,459 @@
+@import 'mixins/clear.less';
+
+//the out container 
+#container{
+    #header{
+        //top header
+        .headerTop{
+            background: #eaeaea;
+            height: 30px;
+            .headerTopMain{
+                width: 1200px;
+                margin: 0 auto;
+                line-height: 30px;
+                .clearfix();
+                //left header
+                .left{
+                    float: left;
+                    h5{
+                        float: left;
+                        margin-right: 10px;
+                    }
+                    p{
+                        float: left;
+                        a{
+                            &:first-child{
+                                border-right: 1px solid #b3aeae;
+                                margin-right: 0px;
+                                padding-right: 3px;
+                            }
+                        }
+                    }
+                }
+
+                //right header
+                .right{
+                    float: right; 
+                    nav{
+                        font-size: 0px;
+                        a{
+                            font-size: 12px;
+                            margin-right: 10px;
+                            padding-right: 10px;
+                            border-right: 1px solid #b3aeae;
+                            &:last-child{
+                                border: none;
+                                margin-right: 0px;
+                                padding-right: 0px;
+                            }
+                            i{};
+                            span{
+                                #lblCartCount {
+                                    font-size: 12px;
+                                    background: #ff0000;
+                                    color: #fff;
+                                    padding: 0 5px;
+                                    vertical-align: top;
+                                    margin-left: -10px;
+                                }
+                                .badge{
+                                    padding-left: 9px;
+                                    padding-right: 9px;
+                                    -webkit-border-radius: 9px;
+                                    -moz-border-radius: 9px;
+                                    border-radius: 9px;
+                                };
+                                .label-warning[href],
+                                .badge-warning[href] {
+                                    background-color: #c67605;
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+         }   
+
+         //button of header.
+        .headerBottom{
+            margin-top: 15px;
+            .headerBottomMain{
+                width: 1200px;
+                margin: 0 auto;
+                .clearfix();
+                //logo
+                .logo{
+                    float: left;
+                    a{
+                        img{
+                            width: 175px;
+                            height: 56px;
+                            margin: 25px 45px;
+                        }
+                    }
+                }
+                //Search
+                .search{
+                    float: right;
+                    margin-top: 35px;
+                    input{
+                        //text input
+                        &:first-child{
+                            box-sizing: border-box;
+                            width: 490px;
+                            height: 32px;
+                            padding: 0 4px;
+                            border:3px solid #ea4a36;
+                            float: left;
+                        }
+                        //submit input
+                        &:last-child{
+                            width: 68px;
+                            height: 32px;
+                            color:#fff; 
+                            background: #ea4a36;  
+                            border: none;                     
+                        }
+                        //place holder color
+                        &::-webkit-input-placeholder{
+                            color:yellowgreen;
+                        }
+                    }
+                }
+            }
+        }      
+    }
+
+    //category
+    #categoryContainer{
+        margin-top:15px;
+        border-bottom: 2px solid #e1251b;
+        .categoryNavMain{
+            width: 1200px;
+            margin: 0 auto;
+            .clearfix();
+            a{
+                margin: 0 15px;
+                font-size: 16px;
+                color: #333;
+                float: left;
+                text-align: center;
+                line-height: 50px;
+                &:first-child{
+                    width: 210px;
+                    height: 50px;
+                    background:#e1251b;
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: bold;
+                    float: left;
+                    text-align: center;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+
+    //product page
+    #productContainer{
+       
+        .productMain{
+            width: 1200px;
+            margin: 15px auto 0 auto;
+            
+            //nav section
+            .navPath{
+                padding: 9px 15px 9px 0;
+                font-size: 0px;
+                a{
+                    font-size: 12px;
+                };
+                i{ 
+                    padding: 0 5px; 
+                    font-size: 12px;
+                };
+            }
+
+            //picture and specific section
+            .details{
+                margin: 5px 0 15px;
+                .clearfix();
+                .left{
+                    width: 400px;
+                    float: left;
+                    .leftTop{
+                        width: 400px;
+                        position: relative;
+                        .smallPic{
+                            width: 400px;
+                            height: 400px; 
+                            border: 1px solid #dfdfdf;
+                            position: relative;
+                            img{
+                                width: 400px;
+                                height: 400px;
+                            };
+                            .mask{
+                                width: 200px;
+                                height: 200px;
+                                background: rgba(255, 255, 255, 0.5);
+                                border: 1px solid #ddd;
+                                position: absolute;
+                                left:0px; 
+                                top: 0px;
+                            }
+                        }
+
+                        .bigPic{
+                            width: 400px; 
+                            height: 400px;
+                            border: 1px solid #ddd;
+                            left: 420px; 
+                            top: 0px;
+                            position: absolute;
+                            overflow: hidden;
+                            img{
+                                width: 800px;
+                                height: 800px;
+                                position: absolute;
+                            }
+                        }
+                    }
+                    .leftBottom{
+                        width: 400px;
+                        margin-top: 5px;
+                        display: flex;
+                        a{
+                            width: 10px;
+                            height: 50px;
+                            border: 1px solid #ccc;
+                            background: #ebebeb;
+                            text-align: center;
+                            line-height: 54px;
+                            &:first-child{
+                                margin-right: 8px;
+                            }
+                        }
+                        .picList{
+                            width: 372px;
+                            height: 56px;
+                            overflow: hidden;
+                            position:relative;
+                            ul{
+                                display: flex;
+                                position: absolute;
+                                transition: 0.5s;
+                                left: 0px;
+                                li{ 
+                                    justify-content: space-around;
+                                    width: 50px;
+                                    height: 50px;
+                                    border: 1px solid #ccc;
+                                    padding: 2px;
+                                    margin-right: 20px;
+                                    img{
+                                        width: 50px;
+                                        height: 50px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .right{
+                    width: 700px;
+                    float: right;
+                    .rightTop{
+                       h3{
+                            font-size: 14px;
+                            line-height: 21px;
+                       }; 
+                      > p{
+                            a{color:green;};
+                            margin-top: 15px;
+                       };
+                       .priceContainer{
+                            margin-top: 10px;
+                            line-height: 28px;
+                            background: #fee9ec;
+                            padding: 7px;
+                            .price{
+                                .clearfix();
+                                > span{
+                                    margin-right: 15px;
+                                    float: left;
+                                };
+                                .priceValue{
+                                    float: left;
+                                    > span{
+                                        font-size: 16px;
+                                        float: left;
+                                    };
+                                    p{
+                                        font-size: 24px;
+                                        float: left;
+                                        margin-right: 10px;
+                                    };
+                                    i{
+                                        a{
+                                            font-size: 12px;
+                                            color: blue;
+                                            float: left;
+                                        }
+                                    }
+                                };
+                                p{
+                                    float: right;
+                                    > span{
+
+                                    };
+
+                                }
+                            };
+                            .promote{
+                                
+                                > span{
+                                    float:left;
+                                    margin-right: 15px
+                                };
+                                .clearfix();
+                                p{
+                                    width:520px;
+                                    line-height: 28px;
+                                    float: left;
+                                    > span {
+                                        color: #999;
+                                        &:first-child{
+                                            background: #c81623;
+                                            padding: 3px;
+                                            color:#fff;
+                                        }
+                                    }
+                                };
+                            }
+                       };
+                       .tradeIn{
+                          
+                            padding-bottom: 5px;
+                            margin-top: 10px;
+                            line-height: 28px;
+                            .clearfix();
+                           > span{
+                                margin-right: 15px;
+                                float: left;
+                           };
+                            > p{
+                                float: left;
+                                color: #999;
+                            };
+                       };
+                       .address{
+                            padding-bottom: 5px;
+                            margin-top: 10px;
+                            line-height: 28px;
+                            .clearfix();
+                            display: flex;
+                            > span{
+                                margin-right: 15px; 
+                                margin-bottom: 5px;
+                            };
+                             > p{
+                                color: #999;
+                            };
+                       }
+                       
+
+                    }
+                    .rightBottom{
+                        margin-top: 10px;
+                        line-height: 28px;
+                        .selection{
+                            display: flex;
+                            .mark{
+                                height: 30px;
+                                background: snow;
+                                border: 1px solid #ddd;
+                                padding: 0 20px;
+                                margin-right: 20px;
+                                text-align: center;
+                                line-height: 30px;
+                                a{
+                                    color: red;
+                                    margin-left: 20px;
+                                }
+                            }
+                        };
+                        .options{
+                            dl{
+                                margin-top:15px;
+                                margin-bottom: 15px;
+                                display: flex;
+                                dt{
+                                    margin-right: 15px; 
+                                     
+                                };
+                                dd{
+                                    margin-right: 10px;
+                                    color: #666;
+                                    line-height: 24px;
+                                    padding: 2px 14px;
+                                    border-top: 1px solid #eee;
+                                    border-left: 1px solid #eee;
+                                    border-right: 1px solid #bbb;
+                                    border-bottom: 1px solid #bbb;
+                                    
+                                };
+                            }
+                        }
+                        .addCart{
+                            display: flex;
+                            .count{
+                                width: 55px;
+                                margin-right: 15px;
+                                position: relative;
+                                
+                                input{
+                                    width: 38px;
+                                    height: 37px;
+                                    border: 1px solid #ddd;
+                                    color: #555;
+                                    text-align: center;
+                                };
+                                a{
+                                    width:15px;
+                                    height: 18px;
+                                    color:#666;  
+                                    background: #f1f1f1;
+                                    position: absolute;
+                                    right: 1px;
+                                    text-align: center;
+                                    line-height: 18px;
+                                    border: 1px solid #ddd;
+                                    &:first-child{
+                                        top: 0px; 
+                                    };
+                                    &:last-child{
+                                        top: 20px;
+                                        border-top: 0px;
+                                    };
+                                }
+                            };
+                            button{
+                                padding-left: 25px;
+                                padding-right: 25px;
+                                height: 36px;
+                                font-size: 16px;
+                                background: #e1251b;
+                                color: #fff;
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    
+}
